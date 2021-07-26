@@ -1,6 +1,7 @@
 var CACHE_NAME = "my-site-cache-v1";
 const DATA_CACHE_NAME = "data-cache-v1";
 
+//List the files to precache
 var urlsToCache = [
   "/",
   "/db.js",
@@ -11,6 +12,7 @@ var urlsToCache = [
   "/icons/icon-512x512.png"
 ];
 
+// When the service worker is installing, open the cache and add the precache resources to it
 self.addEventListener("install", function(event) {
   // Perform install steps
   event.waitUntil(
