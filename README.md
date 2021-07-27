@@ -3,14 +3,16 @@
 ## Description 
 
 I was asked to add functionality to an existing Budget Tracker application to allow offline access and functionality.
-The user will be able to add expenses and deposits to their budget with or without a connection. When entering transactions offline, they should populate the total when brought back online.
+The user will be able to add expenses and deposits to their budget with or without a connection. 
 
 ## Getting Started
 
-```npm i``
+```npm i```
+
 To install all of the dependencies you'll need
 
 ```mongod```
+
 To start the database
 
 ## What we did
@@ -18,6 +20,7 @@ To start the database
 Key Files
 
 index.js - Main application JavaScript file
+
 service-worker.js - Application's service worker file
 
 In order to enable the offline Functionality of entering deposits and expenses offline, we registered service-worker and applied caching resources. 
@@ -47,6 +50,11 @@ Once the service worker is controlling the site, requested resources pass throug
 
 Each request triggers a fetch event that, in this service worker, searches the cache for a match, if there's a match, responds with cached resource. If there isn't a match, the resource is requested normally.
 
-Caching resources allows the app to work offline by avoiding network requests. Now the app can respond with a 200 status code when offline!
+Caching resources allows the app to work offline by avoiding network requests. Now the app can respond with a 200 status code when offline.
+
+## Screenshot
+
+![screenshot](budget-trackers.png)
 
 ## Link
+
